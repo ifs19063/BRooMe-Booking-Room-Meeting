@@ -7,7 +7,7 @@
         @if (Session::has('alert-success'))
             <script>
                 iziToast.success({
-                    title: 'Sukses!',
+                    title: 'Succses!',
                     message: '{{ Session::get('alert-success') }}',
                     position: 'topRight'
                 });
@@ -15,7 +15,7 @@
         @else
         <script>
             iziToast.error({
-                title: 'Gagal!',
+                title: 'Fail!',
                 message: '{{ Session::get('alert-failed') }}',
                 position: 'topRight'
             });

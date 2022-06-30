@@ -50,8 +50,8 @@
           </div>
           
           <div class="simple-footer">
-            Copyright @ BRooMe (Booking Room Meeting) 2022 <br>
-            Powered by @ Tasya & Hanna - IT Del
+            Copyright &copy; BRooMe (Booking Room Meeting) 2022 <br>
+            Powered by &copy; Tasya & Hanna <div class="bullet"></div> IT Del
           </div>
         </div>
       </div>

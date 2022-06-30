@@ -1,28 +1,28 @@
 @extends('layouts.main')
 
 @section('title')
-    Edit Data User - ROOMING
+    Edit User Data - BRooMe
 @endsection 
 
 @section('header-title')
-  Edit Data User
+  Edit User Data
 @endsection 
     
 @section('breadcrumbs')
   <div class="breadcrumb-item"><a href="#">User</a></div>
-  <div class="breadcrumb-item"><a href="{{ route('user.index') }}">Data User</a></div>
+  <div class="breadcrumb-item"><a href="{{ route('user.index') }}">User Data</a></div>
   <div class="breadcrumb-item">
-    <a href="#">Edit Data User</a>
+    <a href="#">Edit User Data</a>
   </div>
   <div class="breadcrumb-item active">{{ $item->name }}</div>
 @endsection
 
 @section('section-title')
-  Edit Data User
+  Edit User Data
 @endsection 
     
 @section('section-lead')
-  Silakan isi form di bawah ini untuk mengedit data {{ $item->name }}.
+Please fill in the form below to edit {{ $item->name }}'s data.
 @endsection
 
 @section('content')
@@ -40,7 +40,7 @@
     @slot('input_form')
 
       @component('components.input-field')
-          @slot('input_label', 'Nama')
+          @slot('input_label', 'Name')
           @slot('input_type', 'text')
           @slot('input_name', 'name')
           @slot('input_value', $item->name)
@@ -49,7 +49,7 @@
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Deskripsi')
+          @slot('input_label', 'Position')
           @slot('input_type', 'text')
           @slot('input_name', 'description')
           @slot('input_value', $item->description)

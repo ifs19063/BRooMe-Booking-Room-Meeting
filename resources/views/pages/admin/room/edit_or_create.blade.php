@@ -2,28 +2,28 @@
 
 @section('title')
   @if(isset($item))
-    Edit Data Ruangan - ROOMING
+    Edit Room Data - BRooMe
   @else 
-    Tambah Data Ruangan - ROOMING
+    Add Room Data - BRooMe
   @endif
 @endsection 
 
 @section('header-title')
   @if(isset($item))
-    Edit Data Ruangan
+    Edit Room Data
   @else 
-    Tambah Data Ruangan
+    Add Room Data
   @endif
 @endsection 
     
 @section('breadcrumbs')
-  <div class="breadcrumb-item"><a href="#">Ruangan</a></div>
-  <div class="breadcrumb-item"><a href="{{ route('room.index') }}">Data Ruangan</a></div>
+  <div class="breadcrumb-item"><a href="#">Room</a></div>
+  <div class="breadcrumb-item"><a href="{{ route('room.index') }}">Room Data</a></div>
   <div class="breadcrumb-item @if(isset($item)) '' @else 'active' @endif">
     @if(isset($item))
-      <a href="#">Edit Data Ruangan</a>
+      <a href="#">Edit Room Data</a>
     @else 
-      Tambah Data Ruangan 
+      Add Room Data 
     @endif
   </div>
   @isset($item)
@@ -33,14 +33,14 @@
 
 @section('section-title')
   @if(isset($item))
-    Edit Data Ruangan
+    Edit Room Data
   @else 
-    Tambah Data Ruangan
+    Add Room Data
   @endif
 @endsection 
     
 @section('section-lead')
-  Silakan isi form di bawah ini untuk @if(isset($item)) mengedit data {{ $item->name }} @else menambah data Ruangan. @endif
+Please fill out the form below to @if(isset($item)) edit {{ $item->name }} data @else add Room data. @endif
 @endsection
 
 @section('content')
@@ -65,7 +65,7 @@
     @slot('input_form')
 
       @component('components.input-field')
-          @slot('input_label', 'Nama')
+          @slot('input_label', 'Name')
           @slot('input_type', 'text')
           @slot('input_name', 'name')
           @isset($item->name)
@@ -83,7 +83,7 @@
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Deskripsi')
+          @slot('input_label', 'Description')
           @slot('input_type', 'text')
           @slot('input_name', 'description')
           @isset($item->description)
@@ -97,7 +97,7 @@
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Kapasitas')
+          @slot('input_label', 'Capacity')
           @slot('input_type', 'number')
           @slot('input_name', 'capacity')
           @isset($item->capacity)
@@ -108,11 +108,11 @@
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Foto')
+          @slot('input_label', 'Picture')
           @slot('input_type', 'file')
           @slot('input_name', 'photo')
           @isset($item)
-            @slot('help_text', 'Tidak perlu input foto jika tidak ingin mengeditnya')
+            @slot('help_text', 'No need for input if you do not want to edit it')
           @endisset 
       @endcomponent
 

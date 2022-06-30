@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Dashboard - ROOMING')
+@section('title', 'Dashboard - BRooMe')
 
 @section('header-title', 'Dashboard')
 
@@ -16,7 +16,7 @@
     @component('components.statistic-card')
       @slot('bg_color', 'bg-primary')
       @slot('icon', 'fas fa-calendar')
-      @slot('title', 'Book Hari Ini')
+      @slot('title', 'Today Booking')
       @slot('value', $booking_today)
     @endcomponent
   </div>
@@ -25,7 +25,7 @@
     @component('components.statistic-card')
       @slot('bg_color', 'bg-success')
       @slot('icon', 'fas fa-calendar-alt')
-      @slot('title', 'Book Semua')
+      @slot('title', 'All Booking')
       @slot('value', $booking_lifetime)
     @endcomponent
   </div>
@@ -39,10 +39,10 @@
   @slot('card_header', 'true')
   @slot('card_header_content')
     <h4>
-      Booking hari ini
+      Today Booking
     </h4>
     <small>
-      Diambil dari 3 data teratas.
+      Taken from the top 3
     </small>
   @endslot
 
@@ -53,12 +53,12 @@
   @slot('table_header')
     <tr>
       <th>#</th>
-      <th>Foto</th>
-      <th>Ruangan</th>
-      <th>Tanggal</th>
-      <th>Waktu Mulai</th>
-      <th>Waktu Selesai</th>
-      <th>Keperluan</th>
+      <th>Picture</th>
+      <th>Room</th>
+      <th>Date</th>
+      <th>Start Time</th>
+      <th>End Time</th>
+      <th>Necessity</th>
       <th>Status</th>
     </tr>
   @endslot

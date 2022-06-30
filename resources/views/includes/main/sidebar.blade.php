@@ -1,10 +1,10 @@
 <div class="main-sidebar">
   <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-      <a href="index.html">ROOMING</a>
+      <a href="index.html">BRooMe</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="index.html">RM</a>
+      <a href="index.html">BM</a>
     </div>
     <ul class="sidebar-menu">
       @if (Auth::user()->role == 'USER')
@@ -12,14 +12,14 @@
         <li class="menu-header">Dashboard</li>
         <li><a class="nav-link" href="{{ route('user.dashboard') }}"><i class="fas fa-fire"></i> <span>Dashboard</span></a></li>
 
-        <li class="menu-header">RUANGAN</li>
+        <li class="menu-header">ROOM booking_list</li>
         <li class="{{ request()->is('room*') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('room-list.index') }}">
-            <i class="fas fa-door-open"></i> <span>List Ruangan</span>
+            <i class="fas fa-door-open"></i> <span>Room List</span>
           </a>
         </li>
 
-        <li class="menu-header">TRANSAKSI</li>
+        <li class="menu-header">TRANSACTION</li>
         <li class="{{ request()->is('my-booking-list*') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('my-booking-list.index') }}">
             <i class="fas fa-list"></i> <span>My Booking List</span>
@@ -29,7 +29,7 @@
         <li class="menu-header">SETTING</li>
         <li class="{{ request()->is('change-pass*') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('user.change-pass.index') }}">
-            <i class="fas fa-key"></i> <span>Ganti Password</span>
+            <i class="fas fa-key"></i> <span>Change Password</span>
           </a>
         </li>
 
@@ -43,7 +43,7 @@
         <li class="menu-header">DATA MASTER</li>
         <li class="{{ request()->is('admin/room*') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('room.index') }}">
-            <i class="fas fa-door-open"></i> <span>Ruangan</span>
+            <i class="fas fa-door-open"></i> <span>Room List</span>
           </a>
         </li>
         <li class="{{ request()->is('admin/user*') ? 'active' : '' }}">
@@ -52,7 +52,7 @@
           </a>
         </li>
 
-        <li class="menu-header">TRANSAKSI</li>
+        <li class="menu-header">TRANSACTION</li>
         <li class="{{ request()->is('admin/booking-list*') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('booking-list.index') }}">
             @inject('booking_list', 'App\Models\BookingList')
@@ -63,7 +63,7 @@
         <li class="menu-header">SETTING</li>
         <li class="{{ request()->is('admin/change-pass*') ? 'active' : '' }}">
           <a class="nav-link" href="{{ route('admin.change-pass.index') }}">
-            <i class="fas fa-key"></i> <span>Ganti Password</span>
+            <i class="fas fa-key"></i> <span>Change Password</span>
           </a>
         </li>
 

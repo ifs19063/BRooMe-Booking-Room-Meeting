@@ -1,27 +1,27 @@
 @extends('layouts.main')
 
 @section('title')
-Tambah Data User - ROOMING
+Add User Data - BRooMe
 @endsection 
 
 @section('header-title')
-Tambah Data User
+Add User Data
 @endsection 
     
 @section('breadcrumbs')
   <div class="breadcrumb-item"><a href="#">User</a></div>
-  <div class="breadcrumb-item"><a href="{{ route('user.index') }}">Data User</a></div>
+  <div class="breadcrumb-item"><a href="{{ route('user.index') }}">User Data</a></div>
   <div class="breadcrumb-item active">
-    Tambah Data User
+    Add User Data
   </div>
 @endsection
 
 @section('section-title')
-Tambah Data User
+Add User Data
 @endsection 
     
 @section('section-lead')
-  Silakan isi form di bawah ini untuk menambah data user. 
+  Please fill in the form below to add user data.
 @endsection
 
 @section('content')
@@ -71,7 +71,7 @@ Tambah Data User
       <hr>
 
       @component('components.input-field')
-          @slot('input_label', 'Nama')
+          @slot('input_label', 'Name')
           @slot('input_type', 'text')
           @slot('input_name', 'name')
           @slot('form_group_class', 'required')
@@ -79,7 +79,7 @@ Tambah Data User
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Deskripsi')
+          @slot('input_label', 'Position')
           @slot('input_type', 'text')
           @slot('input_name', 'description')
       @endcomponent

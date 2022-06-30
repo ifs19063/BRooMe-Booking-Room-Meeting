@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Dashboard - ROOMING')
+@section('title', 'Dashboard - BRooMe')
 
 @section('header-title', 'Dashboard')
 
@@ -15,7 +15,7 @@
   <div class="col-lg-6 col-md-6 col-sm-12">
     <div class="card card-statistic-2">
       <div class="card-stats">
-        <div class="card-stats-title">Statistik Booking
+        <div class="card-stats-title">Booking Statistics
           
         </div>
         <div class="card-stats-items">
@@ -25,25 +25,25 @@
           </div>
           <div class="card-stats-item">
             <div class="card-stats-item-count">{{ $booking_list_disetujui }}</div>
-            <div class="card-stats-item-label">Disetujui</div>
+            <div class="card-stats-item-label">Approved</div>
           </div>
           <div class="card-stats-item">
             <div class="card-stats-item-count">{{ $booking_list_digunakan }}</div>
-            <div class="card-stats-item-label">Sedang Digunakan</div>
+            <div class="card-stats-item-label">In Use</div>
           </div>
         </div>
         <div class="card-stats-items">
           <div class="card-stats-item">
             <div class="card-stats-item-count">{{ $booking_list_selesai }}</div>
-            <div class="card-stats-item-label">Selesai</div>
+            <div class="card-stats-item-label">Finished</div>
           </div>
           <div class="card-stats-item">
             <div class="card-stats-item-count">{{ $booking_list_batal }}</div>
-            <div class="card-stats-item-label">Batal</div>
+            <div class="card-stats-item-label">Cancel</div>
           </div>
           <div class="card-stats-item">
             <div class="card-stats-item-count">{{ $booking_list_ditolak }}</div>
-            <div class="card-stats-item-label">Ditolak</div>
+            <div class="card-stats-item-label">Declined</div>
           </div>
         </div>
         <div class="card-stats-items justify-content-center">
@@ -58,7 +58,7 @@
       </div>
       <div class="card-wrap">
         <div class="card-header">
-          <h4>Total Permintaan Booking</h4>
+          <h4>Total of Booking Request</h4>
         </div>
         <div class="card-body">
           {{ $booking_list_all }}
@@ -71,7 +71,7 @@
     @component('components.statistic-card')
       @slot('bg_color', 'bg-primary')
       @slot('icon', 'fas fa-door-open')
-      @slot('title', 'Total Ruangan')
+      @slot('title', 'Total of Room')
       @slot('value', $room)
     @endcomponent
   </div>
@@ -80,7 +80,7 @@
     @component('components.statistic-card')
       @slot('bg_color', 'bg-primary')
       @slot('icon', 'fas fa-user')
-      @slot('title', 'Total User')
+      @slot('title', 'Total of User')
       @slot('value', $user)
     @endcomponent
   </div>

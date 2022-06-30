@@ -1,28 +1,28 @@
 @extends('layouts.main')
 
 @section('title')
-  Ganti Password User - ROOMING
+  Change Password User - BRooMe
 @endsection 
 
 @section('header-title')
-  Ganti Password User
+  Change Password User
 @endsection 
     
 @section('breadcrumbs')
   <div class="breadcrumb-item"><a href="#">User</a></div>
-  <div class="breadcrumb-item"><a href="{{ route('user.index') }}">Data User</a></div>
+  <div class="breadcrumb-item"><a href="{{ route('user.index') }}">User Data</a></div>
   <div class="breadcrumb-item">
-    <a href="#">Ganti Password User</a>
+    <a href="#">Change Password User</a>
   </div>
   <div class="breadcrumb-item active">{{ $item->name }}</div>
 @endsection
 
 @section('section-title')
-  Ganti Password User
+  Change Password User
 @endsection 
     
 @section('section-lead')
-  Silakan isi form di bawah ini untuk ganti password {{ $item->name }}.
+Please fill out the form below to change {{ $item->name }} 's password.
 @endsection
 
 @section('content')
@@ -40,7 +40,7 @@
     @slot('input_form')
 
       @component('components.input-field')
-          @slot('input_label', 'Password Baru')
+          @slot('input_label', 'New Password')
           @slot('input_type', 'password')
           @slot('input_name', 'password')
           @slot('form_group_class', 'required')
@@ -48,7 +48,7 @@
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Confirm Password Baru')
+          @slot('input_label', 'Confirm New Password')
           @slot('input_type', 'password')
           @slot('input_name', 'confirm_password')
           @slot('form_group_class', 'required')

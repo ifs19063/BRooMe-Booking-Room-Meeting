@@ -1,18 +1,18 @@
 @extends('layouts.main')
 
-@section('title', 'Data User - ROOMING')
+@section('title', 'User Data - BRooMe')
 
-@section('header-title', 'Data User')
+@section('header-title', 'User Data')
     
 @section('breadcrumbs')
   <div class="breadcrumb-item"><a href="#">User</a></div>
-  <div class="breadcrumb-item active">Data User</div>
+  <div class="breadcrumb-item active">User Data</div>
 @endsection
 
 @section('section-title', 'User')
     
 @section('section-lead')
-  Berikut ini adalah daftar seluruh user yang ada.
+  The following is a list of the entire user.
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
   @component('components.datatables')
 
     @slot('buttons')
-      <a href="{{ route('user.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp;Tambah User</a>
+      <a href="{{ route('user.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp;Add User</a>
     @endslot
   
     @slot('table_id', 'user-table')
@@ -30,8 +30,8 @@
         <th>#</th>
         <th>Email</th>
         <th>Username</th>
-        <th>Nama</th>
-        <th>Deskripsi</th>
+        <th>Name</th>
+        <th>Position</th>
       </tr>
     @endslot
       
@@ -82,16 +82,16 @@
                   + ' <div class="bullet"></div>'
 
                   + ' <a href="user/'+row.id+'/change-pass"'
-                  + ' class="text-primary">Ganti Password</a>'
+                  + ' class="text-primary">Change Password</a>'
 
                   + ' <div class="bullet"></div>'
 
                   + ' <a href="javascript:;" data-id="'+row.id+'" '
-                  + ' data-title="Hapus"'
-                  + ' data-body="Yakin ingin menghapus ini?"'
+                  + ' data-title="Delete"'
+                  + ' data-body="Are you sure you want to delete this?"'
                   + ' class="text-danger"'
                   + ' id="delete-btn"'
-                  + ' name="delete-btn">Hapus'
+                  + ' name="delete-btn">Delete'
                   + ' </a>'
                   + '</div>';
 

@@ -1,18 +1,18 @@
 @extends('layouts.main')
 
-@section('title', 'Data Ruangan - ROOMING')
+@section('title', 'Room List - BRooMe')
 
-@section('header-title', 'Data Ruangan')
+@section('header-title', 'Room List')
     
 @section('breadcrumbs')
-  <div class="breadcrumb-item"><a href="#">Ruangan</a></div>
-  <div class="breadcrumb-item active">Data Ruangan</div>
+  <div class="breadcrumb-item"><a href="#">Room</a></div>
+  <div class="breadcrumb-item active">Room Data</div>
 @endsection
 
-@section('section-title', 'Ruangan')
+@section('section-title', 'Room List')
     
 @section('section-lead')
-  Berikut ini adalah daftar seluruh ruangan.
+  The following is a list of the entire room.
 @endsection
 
 @section('content')
@@ -24,10 +24,10 @@
     @slot('table_header')
       <tr>
         <th>#</th>
-        <th>Foto</th>
-        <th>Nama</th>
-        <th>Deskripsi</th>
-        <th>Kapasitas</th>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Capacity</th>
       </tr>
     @endslot
       

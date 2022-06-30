@@ -1,27 +1,27 @@
 @extends('layouts.main')
 
 @section('title')
-  Buat Booking - ROOMING
+  Make Booking - BRooMe
 @endsection 
 
 @section('header-title')
-  Buat Booking
+  Make Booking
 @endsection 
     
 @section('breadcrumbs')
   <div class="breadcrumb-item"><a href="#">Transaksi</a></div>
   <div class="breadcrumb-item"><a href="{{ route('my-booking-list.index') }}">My Booking</a></div>
   <div class="breadcrumb-item active">
-    Buat Booking
+    Make Booking
   </div>
 @endsection
 
 @section('section-title')
-  Buat Booking
+  Make Booking
 @endsection 
     
 @section('section-lead')
-  Silakan isi form di bawah ini untuk membuat booking.
+  Please fill in the form below to make a booking.
 @endsection
 
 @section('content')
@@ -36,10 +36,10 @@
     @slot('input_form')
 
       @component('components.input-field')
-          @slot('input_label', 'Nama Ruangan')
+          @slot('input_label', 'Name')
           @slot('input_type', 'select')
           @slot('select_content')
-            <option value="">Pilih Ruangan</option>
+            <option value="">Choose Room</option>
             @foreach ($rooms as $room)
             <option value="{{ $room->id }}"
                 {{ old('room_id') == $room->id ? 'selected' : '' }}>
@@ -52,7 +52,7 @@
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Tanggal Booking')
+          @slot('input_label', 'Date')
           @slot('input_type', 'text')
           @slot('input_name', 'date')
           @slot('input_classes', 'datepicker')
@@ -63,7 +63,7 @@
       @component('components.input-field')
           @slot('form_row', 'open')
           @slot('col', 'col-md-6')
-          @slot('input_label', 'Waktu Mulai')
+          @slot('input_label', 'Start Time')
           @slot('input_type', 'text')
           @slot('input_id', 'start_time')
           @slot('input_name', 'start_time')
@@ -76,7 +76,7 @@
       @component('components.input-field')
           @slot('form_row', 'close')
           @slot('col', 'col-md-6')
-          @slot('input_label', 'Waktu Selesai')
+          @slot('input_label', 'End Time')
           @slot('input_type', 'text')
           @slot('input_id', 'end_time')
           @slot('input_name', 'end_time')
@@ -87,7 +87,7 @@
       @endcomponent
 
       @component('components.input-field')
-          @slot('input_label', 'Keperluan')
+          @slot('input_label', 'Necessity')
           @slot('input_type', 'text')
           @slot('input_name', 'purpose')
           @slot('form_group_class', 'required')

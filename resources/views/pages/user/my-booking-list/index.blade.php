@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'My Booking List - ROOMING')
+@section('title', 'My Booking List - BRooMe')
 
 @section('header-title', 'My Booking List')
     
@@ -12,7 +12,7 @@
 @section('section-title', 'My Booking List')
     
 @section('section-lead')
-  Berikut ini adalah daftar seluruh booking yang pernah kamu buat.
+  The following is a list of all the bookings you have ever made.
 @endsection
 
 @section('content')
@@ -28,12 +28,12 @@
     @slot('table_header')
       <tr>
         <th>#</th>
-        <th>Foto</th>
-        <th>Ruangan</th>
-        <th>Tanggal</th>
-        <th>Waktu Mulai</th>
-        <th>Waktu Selesai</th>
-        <th>Keperluan</th> 
+        <th>Picture</th>
+        <th>Room</th>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Necessity</th> 
         <th>Status</th> 
       </tr>
     @endslot

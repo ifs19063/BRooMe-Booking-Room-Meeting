@@ -1,18 +1,18 @@
 @extends('layouts.main')
 
-@section('title', 'Data Ruangan - ROOMING')
+@section('title', 'Room Data - BRooMe')
 
-@section('header-title', 'Data Ruangan')
+@section('header-title', 'Room Data')
     
 @section('breadcrumbs')
-  <div class="breadcrumb-item"><a href="#">Ruangan</a></div>
-  <div class="breadcrumb-item active">Data Ruangan</div>
+  <div class="breadcrumb-item"><a href="#">Room</a></div>
+  <div class="breadcrumb-item active">Room Data</div>
 @endsection
 
-@section('section-title', 'Ruangan')
+@section('section-title', 'Room')
     
 @section('section-lead')
-  Berikut ini adalah daftar seluruh ruangan.
+The following is a list of the entire room.
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
   @component('components.datatables')
 
     @slot('buttons')
-      <a href="{{ route('room.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp;Tambah Ruangan</a>
+      <a href="{{ route('room.create') }}" class="btn btn-primary"><i class="fas fa-plus"></i>&nbsp;Add Room</a>
     @endslot
     
     @slot('table_id', 'room-table')
@@ -28,10 +28,10 @@
     @slot('table_header')
       <tr>
         <th>#</th>
-        <th>Foto</th>
-        <th>Nama</th>
-        <th>Deskripsi</th>
-        <th>Kapasitas</th>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Capacity</th>
       </tr>
     @endslot
       
@@ -92,11 +92,11 @@
           + ' <div class="bullet"></div>'
 
           + ' <a href="javascript:;" data-id="'+row.id+'" '
-          + ' data-title="Hapus"'
-          + ' data-body="Yakin ingin menghapus ini?"'
+          + ' data-title="Delete"'
+          + ' data-body="Are you sure you want to delete this?"'
           + ' class="text-danger"'
           + ' id="delete-btn"'
-          + ' name="delete-btn">Hapus'
+          + ' name="delete-btn">Delete'
           + ' </a>'
           + '</div>';
 

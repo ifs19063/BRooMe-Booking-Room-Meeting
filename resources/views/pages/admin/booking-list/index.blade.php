@@ -1,18 +1,18 @@
 @extends('layouts.main')
 
-@section('title', 'Booking List - ROOMING')
+@section('title', 'Booking List - BRooMe')
 
 @section('header-title', 'Booking List')
     
 @section('breadcrumbs')
-  <div class="breadcrumb-item"><a href="#">Transaksi</a></div>
+  <div class="breadcrumb-item"><a href="#">Transaction</a></div>
   <div class="breadcrumb-item active">Booking List</div>
 @endsection
 
 @section('section-title', 'Booking List')
     
 @section('section-lead')
-  Berikut ini adalah daftar seluruh booking dari setiap user.
+The following is a list of all bookings from each user.
 @endsection
 
 @section('content')
@@ -24,13 +24,13 @@
     @slot('table_header')
       <tr>
         <th>#</th>
-        <th>Foto</th>
-        <th>Ruangan</th>
+        <th>Picture</th>
+        <th>Room</th>
         <th>User</th>
-        <th>Tanggal</th>
-        <th>Waktu Mulai</th>
-        <th>Waktu Selesai</th>
-        <th>Keperluan</th> 
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Necessity</th> 
         <th>Status</th> 
       </tr>
     @endslot
@@ -114,14 +114,14 @@
           }
 
           if(data_full_time > now) {
-            if(row.status === 'PENDING' || row.status === 'DITOLAK') {
+            if(row.status === 'PENDING' || row.status === 'DECLINED') {
               result += ' <a href="javascript:;" data-id="'+row.id+'" '
-              + ' data-title="Setujui"'
-              + ' data-body="Yakin setujui booking ini?"'
+              + ' data-title="Approve"'
+              + ' data-body="Are you sure you want to approve with this booking?"'
               + ' data-value="1"'
               + ' class="text-primary"'
               + ' id="acc-btn"'
-              + ' name="acc-btn">Setujui'
+              + ' name="acc-btn">Approve'
               + ' </a>';
             }
           }
@@ -130,14 +130,14 @@
             result += '<div class="bullet"></div>';
           }
 
-          if(row.status === 'PENDING' || row.status === 'DISETUJUI') {
+          if(row.status === 'PENDING' || row.status === 'APPROVED') {
             result += ' <a href="javascript:;" data-id="'+row.id+'" '
-            + ' data-title="Tolak"'
-            + ' data-body="Yakin tolak booking ini?"'
+            + ' data-title="Decline"'
+            + ' data-body="Are you sure you want to decline this booking?"'
             + ' data-value="0"'
             + ' class="text-danger"'
             + ' id="deny-btn"'
-            + ' name="deny-btn">Tolak'
+            + ' name="deny-btn">Decline'
             + ' </a>';
             + '<div class="bullet"></div>';
           }
@@ -177,17 +177,17 @@
 
           if(data === 'PENDING') 
             result += `info`;
-          else if(data === 'DISETUJUI')
+          else if(data === 'APPROVED')
             result += `primary`;
-          else if(data === 'DIGUNAKAN')
+          else if(data === 'IN USE')
             result += `primary`;
-          else if(data === 'DITOLAK')
+          else if(data === 'DECLINED')
             result += `danger`;
           else if(data === 'EXPIRED')
             result += `warning`;
-          else if(data === 'BATAL')
+          else if(data === 'CANCEL')
             result += `warning`;
-          else if(data === 'SELESAI')
+          else if(data === 'FINISHED')
             result += `success`;
 
           result += `">${data}</span>`;
